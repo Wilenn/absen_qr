@@ -63,7 +63,7 @@ if (isset($_SESSION['sebagai'])) {
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="../login/admin.php">
+                <a class="nav-link" href="../index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -79,21 +79,21 @@ if (isset($_SESSION['sebagai'])) {
                 </a>
                 <div id="booking" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="siswa/index.php">Siswa</a>
-                        <a class="collapse-item" href="akun/index.php">Akun</a>
+                        <a class="collapse-item" href="../siswa/index.php">Siswa</a>
+                        <a class="collapse-item" href="../akun/index.php">Akun</a>
                     </div>
                 </div>
             </li>
             <hr class="sidebar-divider">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#data" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-receipt"></i>
                     <span>Absensi</span>
                 </a>
-                <div id="data" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div id="data" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="absen/index.php">History</a>
-                        <a class="collapse-item" href="absen/input.php">Absen</a>
+                        <a class="collapse-item active" href="index.php">History</a>
+                        <a class="collapse-item" href="input.php">Absen</a>
                     </div>
                 </div>
             </li>
@@ -105,7 +105,7 @@ if (isset($_SESSION['sebagai'])) {
 
 
             <li class="nav-item">
-                <a class="nav-link" href="../login/logout.php">
+                <a class="nav-link" href="../../logout.php">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray"></i>
                     <span>Logout</span></a>
             </li>
@@ -191,7 +191,6 @@ if (isset($_SESSION['sebagai'])) {
                                                 <th>Nama</th>
                                                 <th>Kelas</th>
                                                 <th>Jam Kehadiran</th>
-                                                <th>Foto</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -202,9 +201,6 @@ if (isset($_SESSION['sebagai'])) {
                                                 <td><?= $data['nama']; ?></td>
                                                 <td><?= $data['kelas']; ?></td>
                                                 <td><?= $data['jam_kehadiran']; ?></td>
-                                                <td>
-                                                    <img src="../assets/foto/<?= $data['foto']; ?>" alt="" srcset="" width="80"  />
-                                                </td>
                                                 </tr>
                                                 <?php
                                                 }
