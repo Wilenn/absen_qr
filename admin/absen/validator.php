@@ -214,7 +214,7 @@ if (isset($_POST['submit'])) {
                             <a href="index.php" class="btn btn-primary">Go Scanner Page</a>
                         </div>
                         <div class="card-footer text-muted">
-                            2 days ago
+                            
                         </div>
                     </div>
 
